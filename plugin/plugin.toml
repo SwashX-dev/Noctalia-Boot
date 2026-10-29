@@ -1,0 +1,41 @@
+id = "local/switch-os"
+name = "Switch OS"
+version = "1.0.0"
+plugin_api = 24
+author = "local"
+license = "MIT"
+icon = "device-desktop"
+description = "Choose the operating system for the next boot (one time, systemd-boot) with confirmation and PolicyKit authentication."
+dependencies = ["noctalia-switch-os"]
+tags = ["bar", "panel", "shortcut", "system", "utility"]
+
+[[setting]]
+key = "enabled"
+type = "bool"
+label_key = "settings.enabled"
+default = true
+
+[[setting]]
+key = "show_all_generations"
+type = "bool"
+label_key = "settings.show_all_generations"
+description_key = "settings.show_all_generations.description"
+default = false
+
+[[widget]]
+id = "boot-button"
+entry = "widget.luau"
+
+[[panel]]
+id = "switcher"
+entry = "panel.luau"
+width = 600
+height = 640
+placement = "floating"
+position = "center"
+keyboard_focus = "exclusive"
+capture_keys = ["up", "down", "Return", "ctrl+Return", "ctrl+r"]
+
+[[shortcut]]
+id = "switch-os"
+entry = "shortcut.luau"

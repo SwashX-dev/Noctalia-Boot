@@ -1,0 +1,6 @@
+// Noctalia Switch OS key binding for Niri.
+// Included from the user's config with:  include optional=true "<this file>"
+// `noctalia-switch-os-setup check` reports conflicts with existing bindings.
+binds {
+    Mod+Shift+P hotkey-overlay-title="Switch operating system" { spawn "noctalia" "msg" "panel-toggle" "local/switch-os:switcher"; }
+}
