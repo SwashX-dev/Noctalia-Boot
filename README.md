@@ -73,7 +73,7 @@ is the NixOS module.
 
 ```nix
 {
-  inputs.noctalia-switch-os.url = "github:SwashX-dev/noctalia-switch-os";
+  inputs.noctalia-switch-os.url = "github:SwashX-dev/noc-switchos";
   inputs.noctalia-switch-os.inputs.nixpkgs.follows = "nixpkgs";
 
   outputs = { nixpkgs, noctalia-switch-os, ... }: {
@@ -88,9 +88,6 @@ is the NixOS module.
   };
 }
 ```
-
-> Private repository: Nix needs credentials to fetch it (`access-tokens = github.com=<token>` in
-> `nix.conf`, or a `git+ssh://` URL), or use `path:/local/checkout`.
 
 ### Channels
 
