@@ -80,7 +80,7 @@ def boot_worker(identity, runner=subprocess.run, notify=True):
         except Exception as exc:
             status.update(state="failed", message=str(exc))
             if notify and not NOTIFY.startswith("@"):
-                subprocess.run([NOTIFY, "Switch operating system", str(exc)], check=False)
+                subprocess.run([NOTIFY, "Noctalia Boot", str(exc)], check=False)
         write_json(path, status)
         return status
 

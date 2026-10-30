@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Match README, plugin and interface branding to Noctalia Boot.
+- Update repository URLs while preserving existing commands, IDs and settings.
+
 ## 1.0.0 — 2026-10-29
 
 First standalone release, extracted from the local "Desk Tools" plugin

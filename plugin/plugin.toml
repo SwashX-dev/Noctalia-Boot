@@ -1,8 +1,8 @@
 id = "local/switch-os"
-name = "Switch OS"
-version = "1.0.0"
+name = "Noctalia Boot"
+version = "1.0.1"
 plugin_api = 24
-author = "local"
+author = "SwashX-dev"
 license = "MIT"
 icon = "device-desktop"
 description = "Choose the operating system for the next boot (one time, systemd-boot) with confirmation and PolicyKit authentication."

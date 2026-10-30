@@ -61,7 +61,7 @@ stdenvNoCC.mkDerivation {
     runHook postInstall
   '';
   meta = {
-    description = "Confirmed one-time operating-system switching (systemd-boot) as a Noctalia Shell plugin";
+    description = "Noctalia Boot: confirmed one-time operating-system switching (systemd-boot)";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
     mainProgram = "noctalia-switch-os";

@@ -1,4 +1,6 @@
-# Noctalia Switch OS
+# Noctalia Boot
+
+The interface is branded **Noctalia Boot**. Existing command names, plugin IDs, NixOS options and data paths remain unchanged for compatibility.
 
 Choose which operating system starts on the **next boot only**, from a native
 [Noctalia Shell](https://noctalia.dev) v5 panel, with an explicit confirmation and administrator
@@ -9,7 +11,7 @@ that use **systemd-boot**.
 |---|---|
 | ![Boot entries](docs/screenshots/switch-os-entries.png) | ![Confirmation](docs/screenshots/switch-os-confirm.png) |
 
-*Screenshots: the real panel in Noctalia 5.0.1, showing a real systemd-boot menu that was captured
+*Screenshots from the earlier branding: the real panel in Noctalia 5.0.1, showing a real systemd-boot menu that was captured
 read-only and replayed by a test fixture (no restart was requested).*
 
 ## What it does
@@ -73,7 +75,7 @@ is the NixOS module.
 
 ```nix
 {
-  inputs.noctalia-switch-os.url = "github:SwashX-dev/noc-switchos";
+  inputs.noctalia-switch-os.url = "github:SwashX-dev/Noctalia-Boot";
   inputs.noctalia-switch-os.inputs.nixpkgs.follows = "nixpkgs";
 
   outputs = { nixpkgs, noctalia-switch-os, ... }: {
@@ -135,7 +137,7 @@ different key with `programs.noctalia-switch-os.keybinding`.
 The binding runs:
 
 ```kdl
-Mod+Shift+P hotkey-overlay-title="Switch operating system" { spawn "noctalia" "msg" "panel-toggle" "local/switch-os:switcher"; }
+Mod+Shift+P hotkey-overlay-title="Noctalia Boot" { spawn "noctalia" "msg" "panel-toggle" "local/switch-os:switcher"; }
 ```
 
 Bar button: add a widget of type `local/switch-os:boot-button` to a bar.

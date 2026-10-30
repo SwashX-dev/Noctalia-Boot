@@ -13,7 +13,7 @@ function M.request(arguments, callback)
         if result.timedOut then
             callback(nil, "Reading boot entries timed out. Complete or cancel any open authentication prompt.")
         elseif type(data) ~= "table" then
-            callback(nil, "Switch OS did not return valid data. Check that the NixOS module is installed.")
+            callback(nil, "Noctalia Boot did not return valid data. Check that the NixOS module is installed.")
         elseif data.error and data.supported ~= false then
             callback(nil, tostring(data.error))
         elseif result.exitCode ~= 0 and data.supported ~= false then
@@ -22,7 +22,7 @@ function M.request(arguments, callback)
             callback(data, nil)
         end
     end, 30000)
-    if not accepted then callback(nil, "Could not start the Switch OS backend") end
+    if not accepted then callback(nil, "Could not start the Noctalia Boot backend") end
 end
 
 function M.enabled() return noctalia.getConfig("enabled") ~= false end

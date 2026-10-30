@@ -1,6 +1,6 @@
 --!nonstrict
 local client = require("./client.luau")
-shortcut.setLabel("Switch operating system")
+shortcut.setLabel("Noctalia Boot")
 shortcut.setIcon("device-desktop")
 shortcut.setEnabled(client.enabled())
 function onClick()

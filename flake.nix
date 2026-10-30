@@ -1,5 +1,5 @@
 {
-  description = "Noctalia Switch OS: confirmed one-time operating-system switching for systemd-boot";
+  description = "Noctalia Boot: confirmed one-time operating-system switching for systemd-boot";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
@@ -16,7 +16,7 @@
       });
 
       apps = forAllSystems (pkgs: let pkg = self.packages.${pkgs.stdenv.hostPlatform.system}.default; in {
-        default = { type = "app"; program = "${pkg}/bin/noctalia-switch-os"; meta.description = "Switch OS front end"; };
+        default = { type = "app"; program = "${pkg}/bin/noctalia-switch-os"; meta.description = "Noctalia Boot front end"; };
         setup = { type = "app"; program = "${pkg}/bin/noctalia-switch-os-setup"; meta.description = "Per-user Noctalia/Niri setup"; };
       });
 

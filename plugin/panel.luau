@@ -36,7 +36,7 @@ local function confirm()
         busy = false
         if err then requested = false; message = err; render()
         else
-            noctalia.notify("Switch operating system", "Complete the administrator prompt to restart. Cancel it to keep working.")
+            noctalia.notify("Noctalia Boot", "Complete the administrator prompt to restart. Cancel it to keep working.")
             panel.close()
         end
     end)
@@ -92,7 +92,7 @@ render = function()
         ui.row({gap = 12, align = "center"}, {
             ui.glyph({name = "device-desktop", size = 28, color = "primary"}),
             ui.column({gap = 3, flexGrow = 1}, {
-                ui.label({text = "Switch operating system", fontSize = 22, fontWeight = "bold"}),
+                ui.label({text = "Noctalia Boot", fontSize = 22, fontWeight = "bold"}),
                 ui.label({text = "One-time boot · your normal default is kept", color = "on_surface_variant", maxLines = 2}),
             }),
             ui.button({glyph = "refresh", tooltip = "Refresh · Ctrl+R", enabled = not busy, onClick = function() refresh() end}),
